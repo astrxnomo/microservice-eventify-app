@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Create() {
 
@@ -8,7 +9,6 @@ export default function Create() {
     function handleSubmit(e) {
         e.preventDefault()
         
-        // Obtén los valores del formulario usando los setters
         const newName = e.target.name.value
         
 
@@ -20,19 +20,29 @@ export default function Create() {
             body: JSON.stringify({ name: newName })
         })
             .then(response => response.json())
-            .then(data => {
+            .then(() => {
                 alert('Categoria creada con éxito')
                 setName('')
                 e.target.reset() 
             })
-            .catch((error) => {
-                alert('Error al crear la categoria')
+            .catch(error => {
+                alert('Error al crear la categoria: ' + error)
             })
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className='d-flex row justify-content-center mt-5'>
+            <h1 className="fw-bold">Crear categoria</h1>            
+            <hr />
+
+            <div className='d-flex justify-content-center mt-'>
+                <Link to="/" className="btn btn-primary btn-lg mb-3 w-50 fw-bold">
+                    <i className="bi bi-arrow-left-square-fill me-2"></i>
+                    Volver
+                </Link>
+            </div>
+
+            <form onSubmit={handleSubmit} className='d-flex row gap-3 justify-content-center'>
                 <div className="form-group">
                     <label htmlFor="name">Nombre de la categoria: </label>
                     <input 
@@ -45,7 +55,7 @@ export default function Create() {
                         required 
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Crear</button>
+                <button type="submit" className="btn btn-primary w-auto fw-bold">Crear</button>
             </form>
         </div>
     )
