@@ -1,18 +1,15 @@
-# React + Vite
+# Eventify | Microservicio con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2><a href="https://docs.google.com/document/d/16DYdFm3wAC0813IsD3SZrFxFU53xAbaBKwPDLM85pvM/edit?usp=sharing">Documento con presentación general de la aplicación</a></h1>
+<h2><a href="https://github.com/astrxnomo/eventify-app">Aplicacion completa</a></h1>
+</br>
+<h2>Desarrollado por:<h2>
+Luis Felipe Giraldo Ortega </br>
+Alejandro Bermudez Murcia </br>
+Sergio Alejandro Gaitan Quintero </br>
 
-Currently, two official plugins are available:
+</br>
+<h1>Comandos requeridos para iniciar:</h1>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm install </br>
 
-
-<h2>Comandos necesarios para el correcto funcionamiento</h2></br>
-<p>Una vez clonado el repositorio se hace necesario ejecutar los siguientes comandos</p></br>
-<h3>Instalar Vite</h3>
-<p>npm i --location=global npm yarn</p></br>
-<h3>Instalar dependecias del archivo package.json</h3></br>
-<p>yarn install</p></br>
-<h3>Enrutamiento</h3></br>
-<p>npm install react-router-dom</p>
